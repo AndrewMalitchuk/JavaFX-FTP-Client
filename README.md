@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # JavaFX FTP Client
 
 JavaFX FTP Client is simple FTP client, which was written in Java, with using [Apache Commons Net](https://commons.apache.org/proper/commons-net/) library.
@@ -50,3 +51,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 JavaFX FTP Client under the [Apache License, version 2.0]()
+=======
+# JavaFX-FTP-Client
+JavaFX FTP Client is simple FTP client, which was written in Java, with using Apache Commons Net library.
+>>>>>>> ad24cc01b1972ff880de343e7dfecc8f770e7bf6
