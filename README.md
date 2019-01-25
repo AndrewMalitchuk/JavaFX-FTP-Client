@@ -45,7 +45,7 @@ Current JAR-file was compile on machine with ``1.8.0_181`` Java version on a boa
 
 ## Documenctation
 
-Here is [JavaDoc link.](https://andrewmalitchuk.github.io/JavaFX-FTP-Client/)
+Here is a [JavaDoc link.](https://andrewmalitchuk.github.io/JavaFX-FTP-Client/)
 
 ## System requirment
 
