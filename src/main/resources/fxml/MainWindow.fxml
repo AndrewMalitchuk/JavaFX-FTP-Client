@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.controlsfx.control.StatusBar?>
+
+<AnchorPane id="AnchorPane" minHeight="625.0" minWidth="750.0" prefHeight="625.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafx_ftpclient.javafx.MainWindowController">
+    <children>
+        <SplitPane dividerPositions="0.29797979797979796" layoutY="65.0" prefHeight="505.0" prefWidth="750.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+            <items>
+                <AnchorPane minWidth="375.0" prefWidth="375.0">
+                    <children>
+                        <TableView fx:id="localFileTableView" layoutX="-24.0" layoutY="-32.0" onDragDetected="#onLocalFileTableViewDragDetected" onDragDropped="#onLocalFileTableViewDragDropped" onDragOver="#onLocalFileTableViewDragOver" onMouseClicked="#onLocalFileTableViewDobleClick" prefHeight="452.0" prefWidth="330.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0">
+                            <columns>
+                                <TableColumn editable="false" prefWidth="30.0" sortable="false">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="image" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn editable="false" prefWidth="200.0" sortable="false" text="Name">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="name" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn editable="false" prefWidth="50.0" sortable="false" text="Type">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="type" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Size KB">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="size" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn editable="false" prefWidth="120.0" sortable="false" text="Date/Time">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="dateTime" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#onLocalFileTableViewAddNewFolderMenuItemClick" text="New folder">
+                                            <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/plus-black-symbol.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </MenuItem>
+                                        <MenuItem mnemonicParsing="false" onAction="#onLocalFileTableViewCopyMenuItemClick" text="Copy">
+                                            <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/copy-document.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </MenuItem>
+                                        <MenuItem mnemonicParsing="false" onAction="#onLocalFileTableViewDeleteElementMenuItemClick" text="Delete">
+                                            <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/trash.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </MenuItem>
+                                        <MenuItem mnemonicParsing="false" onAction="#onLocalFileTableViewRenameFolderMenuItemClick" text="Rename">
+                                            <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/edit-interface-sign.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </MenuItem>
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                        <TextField fx:id="localPathTextField" layoutX="10.0" layoutY="45.0" onKeyPressed="#onEnterPressedOnLocalPath" promptText="Path" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minWidth="375.0" prefWidth="375.0">
+                    <children>
+                        <TableView fx:id="remoteFileTableView" onDragDetected="#onRemoteFileTableViewDragDetected" onDragDropped="#onRemoteFileTableViewDragDropped" onDragOver="#onRemoteFileTableViewDragOver" onMouseClicked="#onRemoteFileTableViewDoubleClick" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0">
+                            <columns>
+                                <TableColumn editable="false" prefWidth="30.0" sortable="false">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="image" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn editable="false" prefWidth="200.0" sortable="false" text="Name">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="name" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn editable="false" prefWidth="50.0" sortable="false" text="Type">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="type" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Size KB">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="size" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn editable="false" prefWidth="120.0" sortable="false" text="Date/Time">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="dateTime" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#onRemoteFileTableViewAddNewFolderMenuItemClick" text="New folder">
+                                            <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/plus-black-symbol.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </MenuItem>
+                                        <MenuItem mnemonicParsing="false" onAction="#onRemoteFileTableViewCopyMenuItemClick" text="Copy">
+                                            <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/copy-document.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </MenuItem>
+                                        <MenuItem mnemonicParsing="false" onAction="#onRemoteFileTableViewDeleteMenuItemClick" text="Delete">
+                                            <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/trash.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </MenuItem>
+                                        <MenuItem mnemonicParsing="false" onAction="#onRemoteFileTableViewRenameFolderMenuItemClick" text="Rename">
+                                            <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/edit-interface-sign.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </MenuItem>
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                        <TextField fx:id="remotePathTextField" layoutX="10.0" layoutY="14.0" onKeyPressed="#onEnterPressedOnRemotePath" promptText="Path" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onConnectButtonClick" text="New connection" />
+                        <MenuItem mnemonicParsing="false" onAction="#onDisconnectButtonClick" text="Disconnect" />
+                        <MenuItem mnemonicParsing="false" onAction="#onInfoButtonClick" text="Info" />
+                        <MenuItem mnemonicParsing="false" onAction="#onCloseWindowButtonClick" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuHelpAboutItemClick" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TitledPane animated="false" expanded="false" text="FTP Console" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <content>
+                <AnchorPane minHeight="0.0" prefHeight="250.0">
+                    <children>
+                        <TextField fx:id="commandField" layoutX="14.0" layoutY="214.0" onKeyPressed="#onCommandTextFieldEnterPressed" promptText="Your command" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="110.0" />
+                        <Button layoutX="682.0" layoutY="214.0" maxWidth="100.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#onSendButtonClick" prefWidth="100.0" text="Send" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <graphic>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/lightning-bolt-shadow.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <TextArea fx:id="consoleOut" cacheShape="false" centerShape="false" editable="false" layoutY="14.0" prefHeight="180.0" prefWidth="720.0" scaleShape="false" wrapText="true" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+            <tooltip>
+                <Tooltip text="FTP Console" />
+            </tooltip>
+        </TitledPane>
+        <StatusBar fx:id="statusBar" text="Connection is not established" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <tooltip>
+                <Tooltip text="General information about connection" />
+            </tooltip>
+        </StatusBar>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+            <items>
+                <Button mnemonicParsing="false" onAction="#onConnectButtonClick">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/link-symbol.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="New connection" />
+                    </tooltip>
+                </Button>
+                <Button mnemonicParsing="false" onMouseClicked="#onReloadTableViewContentClick">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/refresh-page-option.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Reload content" />
+                    </tooltip>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onInfoButtonClick">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/information-button.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Connection information" />
+                    </tooltip>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onDisconnectButtonClick">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/remove-symbol.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Disconnect" />
+                    </tooltip>
+                </Button>
+            </items>
+        </ToolBar>
+    </children>
+</AnchorPane>

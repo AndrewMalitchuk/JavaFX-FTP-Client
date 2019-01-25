@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="190.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafx_ftpclient.javafx.AboutWindowController">
+    <children>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="21.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <image>
+                <Image url="@../images/android-chrome-192x192.png" />
+            </image>
+        </ImageView>
+        <Hyperlink fx:id="githubLink" graphicTextGap="0.0" layoutX="180.0" layoutY="72.0" onMouseClicked="#onGithubLinkClick" text="GitHub repository" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="90.0" />
+        <Label layoutX="186.0" layoutY="34.0" text="Developed by Andrew Malitchuk" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0" />
+        <Label layoutX="186.0" layoutY="55.0" text="Jan 2019" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="146.0" AnchorPane.topAnchor="70.0" />
+        <Hyperlink fx:id="licenseLink" layoutX="174.0" layoutY="100.0" onMouseClicked="#onLicenseLinkClick" text="Apache License" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="110.0" />
+        <Hyperlink fx:id="usedLibrariesLink" layoutX="174.0" layoutY="113.0" onMouseClicked="#onUsedLibrariesLinkClick" text="Used Libraries" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="130.0" />
+      <Label layoutX="180.0" layoutY="12.0" text="Simple JavaFX FTP Client" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

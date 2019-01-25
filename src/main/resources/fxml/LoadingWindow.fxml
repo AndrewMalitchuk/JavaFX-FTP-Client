@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane id="AnchorPane" prefHeight="220.0" prefWidth="232.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafx_ftpclient.javafx.LoadingWindowController">
+    <children>
+        <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="51.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="38.0">
+            <image>
+                <Image url="@../images/loading.gif" />
+            </image>
+        </ImageView>
+        <Label layoutX="83.0" layoutY="183.0" text="Please wait..." />
+    </children>
+</AnchorPane>
