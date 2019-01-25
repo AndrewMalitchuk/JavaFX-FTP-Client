@@ -35,10 +35,12 @@ Current JAR-file was compile on machine with ``1.8.0_181`` Java version on a boa
 **Option 2:**
 
 * Clone git repository and build it by yourself.
-```
-    git clone
+```console
+    git clone https://github.com/AndrewMalitchuk/JavaFX-FTP-Client.git
+    cd JavaFX-FTP-Client
     mvn install
-    java javafx_ftp_client.jar
+    cd target
+    java -jar JavaFX_FTPClient-1.0.jar
 ```
 
 ## System requirment
