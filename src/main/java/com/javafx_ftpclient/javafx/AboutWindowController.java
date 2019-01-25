@@ -176,7 +176,6 @@
 
    END OF TERMS AND CONDITIONS
  */
-
 package com.javafx_ftpclient.javafx;
 
 import java.awt.Desktop;
@@ -217,7 +216,7 @@ public class AboutWindowController implements Initializable {
                 && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
             try {
                 Desktop.getDesktop().browse(
-                        new URI("http://www.github.com/AndrewMalitchuk"));
+                        new URI("https://github.com/AndrewMalitchuk/JavaFX-FTP-Client"));
             } catch (URISyntaxException | IOException ex) {
                 new MessageWindow().showException(
                         "Exception",
@@ -228,7 +227,6 @@ public class AboutWindowController implements Initializable {
         }
     }
 
-    //TODO: add link to license 
     /**
      * Handling mouse click event on license link
      *
@@ -240,7 +238,7 @@ public class AboutWindowController implements Initializable {
                 && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
             try {
                 Desktop.getDesktop().browse(
-                        new URI("http://www.github.com/AndrewMalitchuk"));
+                        new URI("https://github.com/AndrewMalitchuk/JavaFX-FTP-Client/blob/master/LICENSE"));
             } catch (URISyntaxException | IOException ex) {
                 new MessageWindow().showException(
                         "Exception",
@@ -251,7 +249,6 @@ public class AboutWindowController implements Initializable {
         }
     }
 
-    //TODO: add link to used lib
     /**
      * Handling mouse click event on used libraries link
      *
@@ -263,7 +260,7 @@ public class AboutWindowController implements Initializable {
                 && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
             try {
                 Desktop.getDesktop().browse(
-                        new URI("http://www.github.com/AndrewMalitchuk"));
+                        new URI("https://github.com/AndrewMalitchuk/JavaFX-FTP-Client/blob/master/NOTICE.txt"));
             } catch (URISyntaxException | IOException ex) {
                 new MessageWindow().showException(
                         "Exception",
