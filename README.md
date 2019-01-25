@@ -43,6 +43,10 @@ Current JAR-file was compile on machine with ``1.8.0_181`` Java version on a boa
     java -jar JavaFX_FTPClient-1.0.jar
 ```
 
+## Documenctation
+
+Here is [JavaDoc link.](https://andrewmalitchuk.github.io/JavaFX-FTP-Client/)
+
 ## System requirment
 
 Java version required: ``JDK 8`` and latest.
