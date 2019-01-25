@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # JavaFX FTP Client
 
 JavaFX FTP Client is simple FTP client, which was written in Java, with using [Apache Commons Net](https://commons.apache.org/proper/commons-net/) library.
@@ -7,9 +6,11 @@ JavaFX FTP Client is simple FTP client, which was written in Java, with using [A
 
 JavaFX FTP Client provides all base FTP operation on remote FTP server. Application's GUI have something in common with Total/Double/Norton Commander, means it has two panels for displaying local and remote file system.
 
+![Demo ](https://github.com/AndrewMalitchuk/JavaFX-FTP-Client/blob/master/readme-images/img.png "Demo")
+
 **Application demonstration:**
 
-![Demo GIF](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Demo GIF")
+![Demo GIF](https://github.com/AndrewMalitchuk/JavaFX-FTP-Client/blob/master/readme-images/gif.gif "Demo GIF")
 
 This project was created for improving programming skills and for discovering something new.
 
@@ -28,7 +29,7 @@ This project was created for improving programming skills and for discovering so
 
 **Option 1:**
 
-* Download [JAR file]() that was complile by me. 
+* Download [JAR file](https://github.com/AndrewMalitchuk/JavaFX-FTP-Client/blob/master/target/JavaFX_FTPClient-1.0.jar) that was complile by me. 
 Current JAR-file was compile on machine with ``1.8.0_181`` Java version on a board.
 
 **Option 2:**
@@ -50,8 +51,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## License
 
-JavaFX FTP Client under the [Apache License, version 2.0]()
-=======
-# JavaFX-FTP-Client
-JavaFX FTP Client is simple FTP client, which was written in Java, with using Apache Commons Net library.
->>>>>>> ad24cc01b1972ff880de343e7dfecc8f770e7bf6
+JavaFX FTP Client under the [Apache License, version 2.0](https://github.com/AndrewMalitchuk/JavaFX-FTP-Client/blob/master/LICENSE)
+
