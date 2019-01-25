@@ -11,7 +11,7 @@
     <children>
         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="21.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
             <image>
-                <Image url="@../images/android-chrome-192x192.png" />
+                <Image url="@../images/icon.png" />
             </image>
         </ImageView>
         <Hyperlink fx:id="githubLink" graphicTextGap="0.0" layoutX="180.0" layoutY="72.0" onMouseClicked="#onGithubLinkClick" text="GitHub repository" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="90.0" />
