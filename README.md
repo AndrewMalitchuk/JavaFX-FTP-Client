@@ -6,11 +6,11 @@ JavaFX FTP Client is simple FTP client, which was written in Java, with using [A
 
 JavaFX FTP Client provides all base FTP operation on remote FTP server. Application's GUI have something in common with Total/Double/Norton Commander, means it has two panels for displaying local and remote file system.
 
-![Demo ](https://github.com/AndrewMalitchuk/JavaFX-FTP-Client/blob/master/readme-images/img.png "Demo")
+![Demo ](https://github.com/AndrewMalitchuk/JavaFX-FTP-Client/blob/master/readme-images/1.png "Demo")
 
 **Application demonstration:**
 
-![Demo GIF](https://github.com/AndrewMalitchuk/JavaFX-FTP-Client/blob/master/readme-images/gif.gif "Demo GIF")
+![Demo GIF](https://github.com/AndrewMalitchuk/JavaFX-FTP-Client/blob/master/readme-images/1.gif "Demo GIF")
 
 This project was created for improving programming skills and for discovering something new.
 
